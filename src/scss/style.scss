@@ -18,5 +18,55 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
   overflow: hidden;
+}
+
+.pas {
+  border: 1px solid snow;
+  padding: 2rem;
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  &_text {
+    font-size: 5rem;
+    line-height: 7rem;
+    text-align: center;
+    color: white;
+  }
+  &_inp {
+    font-size: 2rem;
+    line-height: 2.7rem;
+    display: block;
+    width: 90%;
+    height: 3rem;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    background-color: azure;
+    position: absolute;
+    border: none;
+    outline: none;
+  }
+  &_btn {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    max-width: 20rem;
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(22, 22, 22);
+    color: white;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 90%;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover{
+      border: 1px solid blue;
+    }
+  }
 }

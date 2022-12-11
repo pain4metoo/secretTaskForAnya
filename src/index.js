@@ -1,8 +1,16 @@
+import { pas1 } from "./js/pas1";
 import "./scss/style.scss";
-import { VigenereCipheringMachine } from "./js/vigenere";
 
-const p = new VigenereCipheringMachine('');
+const input = document.querySelector('.pas_inp');
+const btn = document.querySelector('.pas_btn');
 
-const PAS = p.decrypt('JGUGELWUGLQTLMJGEGOBIUICIPQCNSPPGKXKUGK', 'sdkfnsdkfnksdkfsdkfweobweuiogbwregubrwesofsdjlnfsdjof');
+btn.addEventListener('click', () => {
+    if (input.value === pas1()) {
+        console.log(true);
+    } else {
+        console.log(false);
+    }
+})
 
-console.log(PAS)
+
+// pass UOQSVJATQXYLFEKNXRNONSYBQ
