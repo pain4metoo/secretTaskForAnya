@@ -19,7 +19,7 @@ export function generateLogicGame() {
                     const wrapper = document.querySelector('.wrapper');
                     const gameEnd = document.createElement('div');
                     gameEnd.classList = 'game_end';
-                    gameEnd.textContent = 'Ссылка на фото!';
+                    gameEnd.textContent = 'https://ibb.co/3d8BjVD';
                     wrapper.append(gameEnd);
                     return;
                 }
