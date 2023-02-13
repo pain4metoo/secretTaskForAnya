@@ -13,18 +13,30 @@ export function generateLogicGame() {
         el.textContent = data[currRandom].answer[i];
         el.onclick = () => {
             if (i === data[currRandom].trueAnswer) {
-                state.counter += 1;
-                counter.textContent = `${state.counter} / 20`;
-                if (state.counter >= 20) {
-                    const wrapper = document.querySelector('.wrapper');
-                    const gameEnd = document.createElement('div');
-                    gameEnd.classList = 'game_end';
-                    gameEnd.textContent = 'https://ibb.co/3d8BjVD';
-                    wrapper.append(gameEnd);
-                    return;
-                }
-                generateLogicGame();
+                document.querySelectorAll('.quest_answer').forEach((el) => {
+                    el.style.background = 'green';
+                })
+                setTimeout(() => {
+                    document.querySelectorAll('.quest_answer').forEach((el) => {
+                        el.style.background = 'aqua';
+                    })
+                    state.counter += 1;
+                    counter.textContent = `${state.counter} / 20`;
+                    if (state.counter >= 20) {
+                        const wrapper = document.querySelector('.wrapper');
+                        const gameEnd = document.createElement('div');
+                        gameEnd.classList = 'game_end';
+                        gameEnd.textContent = 'https://ibb.co/3d8BjVD';
+                        wrapper.append(gameEnd);
+                        return;
+                    }
+                    generateLogicGame();
+                }, 500);
+
             } else {
+                document.querySelectorAll('.quest_answer').forEach((el) => {
+                    el.style.background = 'red';
+                })
                 setTimeout(() => {
                     location.reload();
                 }, 1000)

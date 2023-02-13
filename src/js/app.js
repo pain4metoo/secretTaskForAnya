@@ -13,5 +13,12 @@ export class App extends Control {
             const questBtn = new Control(questInner.node, 'div', 'quest_answer', 'answer');
         }
         generateLogicGame()
+
+        const audioText = new Control(this.node, 'p', 'audio_text', 'Прослушай аудио перед началом')
+        const audio = new Control(this.node, 'audio', 'audio');
+        const music = new Control(audio.node, 'source');
+        music.node.setAttribute('src', './mus.mp3');
+        audio.node.setAttribute('controls', 'controls')
+
     }
 }
