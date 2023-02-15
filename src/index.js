@@ -24,6 +24,3 @@ btn.addEventListener('click', () => {
     }
 
 })
-
-
-// pass UOQSVJATQXYLFEKNXRNONSYBQ

@@ -18,7 +18,7 @@ export function generateLogicGame() {
                 })
                 setTimeout(() => {
                     document.querySelectorAll('.quest_answer').forEach((el) => {
-                        el.style.background = 'aqua';
+                        el.style.background = 'git aqua';
                     })
                     state.counter += 1;
                     counter.textContent = `${state.counter} / 20`;
